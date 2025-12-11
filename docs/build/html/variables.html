@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variables &mdash; Longitudinal ECG Analysis 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Maintenance" href="maintenance.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Longitudinal ECG Analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#link-variables">Link variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clinical-variables">Clinical variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#outcome-variables">Outcome variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset-variables">Dataset variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ecg-derived-variables">ECG-derived variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Longitudinal ECG Analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Variables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/variables.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="variables">
+<h1>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h1>
+<p><strong>Longitudinal ECG Analysis</strong> extracts standard variables from datasets, either by extracting variables recorded in routine clinical practice or studies (such as age and gender), or by deriving variables from ECG signals (such as heart rate).</p>
+<section id="link-variables">
+<span id="id1"></span><h2>Link variables<a class="headerlink" href="#link-variables" title="Link to this heading"></a></h2>
+<p>The following link variables are used:</p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Link variables</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Abbreviation</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>subj_id</p></td>
+<td><p>Subject ID (a string)</p></td>
+</tr>
+<tr class="row-odd"><td><p>enc_id</p></td>
+<td><p>Encounter ID (a string): one subject can have multiple encounters</p></td>
+</tr>
+<tr class="row-even"><td><p>rec_id</p></td>
+<td><p>Recording ID (a string): one encounter can have multiple recordings</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="clinical-variables">
+<span id="id2"></span><h2>Clinical variables<a class="headerlink" href="#clinical-variables" title="Link to this heading"></a></h2>
+<p>The following table provides the definitions of clinical variables. Each dataset will contain only a subset of these variables, dependent on what is available in the raw data.</p>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Clinical variables</span><a class="headerlink" href="#id7" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Abbreviation</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>age</p></td>
+<td><p>Age (years)</p></td>
+</tr>
+<tr class="row-odd"><td><p>gender</p></td>
+<td><p>Gender (female=1; male==2)</p></td>
+</tr>
+<tr class="row-even"><td><p>weight</p></td>
+<td><p>Weight (kg)</p></td>
+</tr>
+<tr class="row-odd"><td><p>height</p></td>
+<td><p>Height (m)</p></td>
+</tr>
+<tr class="row-even"><td><p>bmi</p></td>
+<td><p>Body Mass Index (kg/m^2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>dbp</p></td>
+<td><p>Diastolic blood pressure (mmHg)</p></td>
+</tr>
+<tr class="row-even"><td><p>sbp</p></td>
+<td><p>Systolic blood pressure (mmHg)</p></td>
+</tr>
+<tr class="row-odd"><td><p>lvef</p></td>
+<td><p>Left ventricular ejection fraction (LVEF) (%)</p></td>
+</tr>
+<tr class="row-even"><td><p>prior_mi</p></td>
+<td><p>Whether (1) or not (0) the subject has previously had a myocardial infarction (MI)</p></td>
+</tr>
+<tr class="row-odd"><td><p>nyha</p></td>
+<td><p>New York Heart Association (NYHA) Functional Classification (1 = no limitation of physical activity; 2 = slight limitation; 3 = marked limitation; 4 = symptoms of heart failure at rest)</p></td>
+</tr>
+<tr class="row-even"><td><p>diabetes</p></td>
+<td><p>Whether (1) or not (0) the subject has diabetes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>arb</p></td>
+<td><p>Whether (1) or not (0) the subject is taking ARB (angiotensin II receptor blockers).</p></td>
+</tr>
+<tr class="row-even"><td><p>ace_inhibitor</p></td>
+<td><p>Whether (1) or not (0) the subject is taking ACE (angiotensin-converting enzyme) inhibitors.</p></td>
+</tr>
+<tr class="row-odd"><td><p>beta_blockers</p></td>
+<td><p>Whether (1) or not (0) the subject is taking beta blockers.</p></td>
+</tr>
+<tr class="row-even"><td><p>amiodarone</p></td>
+<td><p>Whether (1) or not (0) the subject is taking amiodarone.</p></td>
+</tr>
+<tr class="row-odd"><td><p>no_pvcs_24hr</p></td>
+<td><p>Number of premature ventricular contractions recorded in a 24-hour monitoring period.</p></td>
+</tr>
+<tr class="row-even"><td><p>ischemic_dilated_cardiomyopathy</p></td>
+<td><p>Whether (1) or not (0) the subject has ischemic dilated cardiomyopathy.</p></td>
+</tr>
+<tr class="row-odd"><td><p>hf</p></td>
+<td><p>Whether (1) or not (0) the subject has heart failure</p></td>
+</tr>
+<tr class="row-even"><td><p>sinusal rhythm</p></td>
+<td><p>Whether (1) or not (0) the subject has sinusal rhythm.</p></td>
+</tr>
+<tr class="row-odd"><td><p>lvef_under_35</p></td>
+<td><p>Whether (1) or not (0) the subject has a left ventricular ejection fraction (LVEF) of &lt; 35%.</p></td>
+</tr>
+<tr class="row-even"><td><p>nyha_class_iii</p></td>
+<td><p>Whether (1) or not (0) the subject has a NYHA class of 3.</p></td>
+</tr>
+<tr class="row-odd"><td><p>arb_or_ace_inhibitors</p></td>
+<td><p>Whether (1) or not (0) the subject is taking ARB (angiotensin II receptor blockers) or ACE (angiotensin-converting enzyme) inhibitors.</p></td>
+</tr>
+<tr class="row-even"><td><p>temp</p></td>
+<td><p>Body temperature (°C)</p></td>
+</tr>
+<tr class="row-odd"><td><p>heart_rate</p></td>
+<td><p>Heart rate (beats per minute)</p></td>
+</tr>
+<tr class="row-even"><td><p>resp_rate</p></td>
+<td><p>Respiratory rate (breaths per minute)</p></td>
+</tr>
+<tr class="row-odd"><td><p>spo2</p></td>
+<td><p>Blood oxygen saturation (%)</p></td>
+</tr>
+<tr class="row-even"><td><p>visited_ED_previously</p></td>
+<td><p>Whether (1) or not (0) the subject had visited the Emergency Department (ED) previously.</p></td>
+</tr>
+<tr class="row-odd"><td><p>mi_visit_before</p></td>
+<td><p>Whether (1) or not (0) the subject had a myocardial infarction (MI) diagnosis on a previous ED visit.</p></td>
+</tr>
+<tr class="row-even"><td><p>cardiac_visit_before</p></td>
+<td><p>Whether (1) or not (0) the subject had a cardiac diagnosis on a previous ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>cv_visit_before</p></td>
+<td><p>Whether (1) or not (0) the subject had a cardiovascular diagnosis on a previous ED visit.</p></td>
+</tr>
+<tr class="row-even"><td><p>any_visit_before</p></td>
+<td><p>Whether (1) or not (0) the subject had any previous ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>cardiac_hosp_before</p></td>
+<td><p>Whether (1) or not (0) the subject had been hospitalized for a cardiac reason before the index ED visit.</p></td>
+</tr>
+<tr class="row-even"><td><p>cv_hosp_before</p></td>
+<td><p>Whether (1) or not (0) the subject had been hospitalized for a cardiovascular reason before the index ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>hosp_before</p></td>
+<td><p>Whether (1) or not (0) the subject had been hospitalized for any reason before the index ED visit.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="outcome-variables">
+<span id="id3"></span><h2>Outcome variables<a class="headerlink" href="#outcome-variables" title="Link to this heading"></a></h2>
+<p>The following table provides the definitions of outcome variables. Each dataset will contain only a subset of these variables, dependent on what is available in the raw data.</p>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Outcome variables</span><a class="headerlink" href="#id8" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Abbreviation</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>survived</p></td>
+<td><p>Whether or not the subject survived to the end of the follow-up time.</p></td>
+</tr>
+<tr class="row-odd"><td><p>other_death</p></td>
+<td><p>Whether or not the subject died due to other causes during follow-up.</p></td>
+</tr>
+<tr class="row-even"><td><p>sudden_cardiac_death</p></td>
+<td><p>Whether or not the subject died due to sudden cardiac death during follow-up.</p></td>
+</tr>
+<tr class="row-odd"><td><p>pump_failure_death</p></td>
+<td><p>Whether or not the subject died due to pump failure death during follow-up.</p></td>
+</tr>
+<tr class="row-even"><td><p>*_followup</p></td>
+<td><p>Follow-up time (in years) for the outcome stated in place of *.</p></td>
+</tr>
+<tr class="row-odd"><td><p>hosp_los</p></td>
+<td><p>Length of hospital stay (in days).</p></td>
+</tr>
+<tr class="row-even"><td><p>esi</p></td>
+<td><p>Emergency Severity Index (ESI).</p></td>
+</tr>
+<tr class="row-odd"><td><p>admitted</p></td>
+<td><p>Whether (1) or not (0) the subject was admitted to hospital.</p></td>
+</tr>
+<tr class="row-even"><td><p>survived_hospital</p></td>
+<td><p>Whether or not the subject survived to hospital discharge.</p></td>
+</tr>
+<tr class="row-odd"><td><p>visited_ED_subsequently</p></td>
+<td><p>Whether (1) or not (0) the subject visited the Emergency Department (ED) visited_ED_subsequently</p></td>
+</tr>
+<tr class="row-even"><td><p>icd10_diagnosis</p></td>
+<td><p>ICD-10 diagnosis code assigned to the subject.</p></td>
+</tr>
+<tr class="row-odd"><td><p>cardiac_diagnosis</p></td>
+<td><p>Whether (1) or not (0) the subject was given a cardiac diagnosis.</p></td>
+</tr>
+<tr class="row-even"><td><p>cardiovascular_diagnosis</p></td>
+<td><p>Whether (1) or not (0) the subject was given a cardiovascular diagnosis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>mi_diagnosis</p></td>
+<td><p>Whether (1) or not (0) the subject was given a myocardial infarction (MI) diagnosis.</p></td>
+</tr>
+<tr class="row-even"><td><p>mi_visit_after</p></td>
+<td><p>Whether (1) or not (0) the subject had a myocardial infarction (MI) diagnosis on a subsequent ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>time_to_mi_visit</p></td>
+<td><p>Time to a subsequent ED visit at which the subject was given a myocardial infarction (MI) diagnosis.</p></td>
+</tr>
+<tr class="row-even"><td><p>cardiac_visit_after</p></td>
+<td><p>Whether (1) or not (0) the subject had a cardiac diagnosis on a subsequent ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>time_to_cardiac_visit</p></td>
+<td><p>Time to a subsequent ED visit at which the subject was given a cardiac diagnosis.</p></td>
+</tr>
+<tr class="row-even"><td><p>cv_visit_after</p></td>
+<td><p>Whether (1) or not (0) the subject had a cardiovascular diagnosis on a subsequent ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>time_to_cv_visit</p></td>
+<td><p>Time to a subsequent ED visit at which the subject was given a cardiovascular diagnosis.</p></td>
+</tr>
+<tr class="row-even"><td><p>any_visit_after</p></td>
+<td><p>Whether (1) or not (0) the subject had a subsequent ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>time_to_any_visit</p></td>
+<td><p>Time to a subsequent ED visit.</p></td>
+</tr>
+<tr class="row-even"><td><p>cardiac_hosp_after</p></td>
+<td><p>Whether (1) or not (0) the subject was hospitalized for a cardiac reason after the index ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>time_to_cardiac_hosp</p></td>
+<td><p>Time to hospitalization for a cardiac reason after the index ED visit.</p></td>
+</tr>
+<tr class="row-even"><td><p>cv_hosp_after</p></td>
+<td><p>Whether (1) or not (0) the subject was hospitalized for a cardiovascular reason after the index ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>time_to_cv_hosp</p></td>
+<td><p>Time to hospitalization for a cardiovascular reason after the index ED visit.</p></td>
+</tr>
+<tr class="row-even"><td><p>hosp_after</p></td>
+<td><p>Whether (1) or not (0) the subject was hospitalized on a subsequent ED visit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>time_to_hosp</p></td>
+<td><p>Time to hospitalization following a subsequent ED visit.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dataset-variables">
+<span id="id4"></span><h2>Dataset variables<a class="headerlink" href="#dataset-variables" title="Link to this heading"></a></h2>
+<p>The following table provides the definitions of dataset variables - those variables which describe what data are available in the dataset.</p>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">Dataset variables</span><a class="headerlink" href="#id9" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Abbreviation</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*_available</p></td>
+<td><p>Whether (1) or not (0) the signal abbreviated as * is available in the recording</p></td>
+</tr>
+<tr class="row-odd"><td><p>holter_available</p></td>
+<td><p>Whether (1) or not (0) there is a Holter recording file available in the dataset</p></td>
+</tr>
+<tr class="row-even"><td><p>filetype</p></td>
+<td><p>The filetype of the recording (e.g., ‘WFDB’, ‘EDF’, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>filepath</p></td>
+<td><p>The filename of the recording (without an extension)</p></td>
+</tr>
+<tr class="row-even"><td><p>*_duration</p></td>
+<td><p>The duration (in seconds) of the signal abbreviated as * in the recording</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ecg-derived-variables">
+<span id="id5"></span><h2>ECG-derived variables<a class="headerlink" href="#ecg-derived-variables" title="Link to this heading"></a></h2>
+<p>The following table provides the definitions of ECG-derived variables - features derived from the ECG signals.</p>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">ECG-derived variables</span><a class="headerlink" href="#id10" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Abbreviation</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ecg*_AC</p></td>
+<td><p>The Phase Rectification Signal Averaging (PRSA) acceleration capacity (AC) derived from the ECG lead abbreviated as *.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ecg*_DC</p></td>
+<td><p>The Phase Rectification Signal Averaging (PRSA) deceleration capacity (DC) derived from the ECG lead abbreviated as *.</p></td>
+</tr>
+<tr class="row-even"><td><p>ecg*_ECG_Rate_Mean</p></td>
+<td><p>The mean heart rate (in beats per minute) derived from the ECG lead abbreviated as *.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ecg*_HRV_#</p></td>
+<td><p>Heart Rate Variability (HRV) feature # derived from the ECG lead abbreviated as *. See the NeuroKit toolbox for details of HRV features.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="maintenance.html" class="btn btn-neutral float-right" title="Maintenance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Nokia Bell Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

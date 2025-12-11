@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples &mdash; Longitudinal ECG Analysis 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variables" href="variables.html" />
+    <link rel="prev" title="Datasets" href="datasets.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Longitudinal ECG Analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-demo-analysis">Running demo analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#generating-dataset-settings">Generating Dataset Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#curating-entire-dataset">Curating Entire Dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#generating-analysis-settings">Generating Analysis Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#curating-analysis-dataset">Curating Analysis Dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#deriving-signal-features">Deriving signal features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-for-statistical-analysis">Compiling for statistical analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#performing-statistical-analysis">Performing statistical analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Longitudinal ECG Analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h1>
+<section id="running-demo-analysis">
+<span id="id1"></span><h2>Running demo analysis<a class="headerlink" href="#running-demo-analysis" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">longitudinal_ecg_analysis.run_demo</span></code> to run a short demo analysis.</p>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.run_demo<span class="w"> </span>&lt;dataset_root_raw_folder&gt;<span class="w"> </span>&lt;dataset_root_proc_folder&gt;<span class="w"> </span>&lt;dataset_name&gt;
+</pre></div>
+</div>
+<p>where:
+* <cite>dataset_root_raw_folder</cite> is the root folder for the raw data.
+* <cite>dataset_root_proc_folder</cite> is the root folder for the processed data.
+* <cite>dataset_name</cite> is the name of the dataset to be processed (e.g. music).</p>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.run_demo_analysis<span class="w"> </span>/Users/petercharlton/Documents/data/music/raw<span class="w"> </span>/Users/petercharlton/Documents/data/music/proc<span class="w"> </span>music
+</pre></div>
+</div>
+<p>This command will perform all of the steps outlined on the <a class="reference internal" href="overview.html#steps"><span class="std std-ref">Overview page</span></a>. The following examples cover each of these steps individually.</p>
+</section>
+</section>
+<section id="generating-dataset-settings">
+<span id="id2"></span><h2>Generating Dataset Settings<a class="headerlink" href="#generating-dataset-settings" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">longitudinal_ecg_analysis.gen_dataset_settings</span></code> to generate a JSON settings file for a particular dataset.</p>
+<section id="id3">
+<h3>Usage<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.gen_dataset_settings<span class="w"> </span>&lt;dataset_root_raw_folder&gt;<span class="w"> </span>&lt;dataset_root_proc_folder&gt;<span class="w"> </span>&lt;dataset_name&gt;
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>Example<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.gen_dataset_settings<span class="w"> </span>/Users/petercharlton/Documents/data/music/raw<span class="w"> </span>/Users/petercharlton/Documents/data/music/proc<span class="w"> </span>music
+</pre></div>
+</div>
+</section>
+</section>
+<section id="curating-entire-dataset">
+<span id="id5"></span><h2>Curating Entire Dataset<a class="headerlink" href="#curating-entire-dataset" title="Link to this heading"></a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">longitudinal_ecg_analysis.curate_dataset</span></code> module to curate an entire dataset.</p>
+<section id="id6">
+<h3>Usage<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.curate_entire_dataset<span class="w"> </span>&lt;dataset_root_proc_folder&gt;<span class="w"> </span><span class="o">[</span>--redo_everything<span class="o">]</span>
+</pre></div>
+</div>
+<p>where:
+* <cite>–redo_everything</cite> is an optional flag to re-process all data, even if already processed.</p>
+</section>
+<section id="id7">
+<h3>Example<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.curate_entire_dataset<span class="w"> </span>/Users/petercharlton/Documents/data/music/proc
+</pre></div>
+</div>
+</section>
+</section>
+<section id="generating-analysis-settings">
+<span id="id8"></span><h2>Generating Analysis Settings<a class="headerlink" href="#generating-analysis-settings" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">longitudinal_ecg_analysis.gen_settings</span></code> to generate a JSON settings file for your analysis.</p>
+<section id="id9">
+<h3>Usage<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.gen_dataset_settings<span class="w"> </span>&lt;dataset_root_proc_folder&gt;<span class="w"> </span>&lt;analysis_name&gt;<span class="w"> </span>&lt;do_demo&gt;
+</pre></div>
+</div>
+<p>where:
+* <cite>analysis_name</cite> is the name of the analysis to be performed (e.g. analysis1).
+* <cite>do_demo</cite> is a flag indicating whether to run a demo analysis (e.g. True or False).</p>
+</section>
+<section id="id10">
+<h3>Example<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.gen_settings<span class="w"> </span>/Users/petercharlton/Documents/data/music/raw<span class="w"> </span>/Users/petercharlton/Documents/data/music/proc<span class="w"> </span>music<span class="w"> </span>analysis1
+</pre></div>
+</div>
+</section>
+</section>
+<section id="curating-analysis-dataset">
+<span id="id11"></span><h2>Curating Analysis Dataset<a class="headerlink" href="#curating-analysis-dataset" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">longitudinal_ecg_analysis.curate_analysis_dataset</span></code> to curate a subset of a dataset for analysis.</p>
+<section id="id12">
+<h3>Usage<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.curate_analysis_dataset<span class="w"> </span>&lt;dataset_root_proc_folder&gt;<span class="w"> </span>&lt;analysis_name&gt;
+</pre></div>
+</div>
+</section>
+<section id="id13">
+<h3>Example<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.curate_analysis_dataset<span class="w"> </span>/Users/petercharlton/Documents/data/music/proc<span class="w"> </span>analysis1
+</pre></div>
+</div>
+</section>
+</section>
+<section id="deriving-signal-features">
+<span id="id14"></span><h2>Deriving signal features<a class="headerlink" href="#deriving-signal-features" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">longitudinal_ecg_analysis.derive_signal_features</span></code> to derive signal features from ECG signals.</p>
+<section id="id15">
+<h3>Usage<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.derive_signal_features<span class="w"> </span>&lt;dataset_root_proc_folder&gt;<span class="w"> </span>&lt;analysis_name&gt;
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h3>Example<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.derive_signal_features<span class="w"> </span>/Users/petercharlton/Documents/data/music/proc<span class="w"> </span>analysis1
+</pre></div>
+</div>
+</section>
+</section>
+<section id="compiling-for-statistical-analysis">
+<span id="compiling-for-stats"></span><h2>Compiling for statistical analysis<a class="headerlink" href="#compiling-for-statistical-analysis" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">longitudinal_ecg_analysis.compile_for_stats</span></code> to compile derived features into aggregate metrics for statistical analysis.</p>
+<section id="id17">
+<h3>Usage<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.compile_for_stats<span class="w"> </span>&lt;dataset_root_proc_folder&gt;<span class="w"> </span>&lt;analysis_name&gt;
+</pre></div>
+</div>
+</section>
+<section id="id18">
+<h3>Example<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.compile_for_stats<span class="w"> </span>/Users/petercharlton/Documents/data/music/proc<span class="w"> </span>analysis1
+</pre></div>
+</div>
+</section>
+</section>
+<section id="performing-statistical-analysis">
+<span id="statistical-analysis"></span><h2>Performing statistical analysis<a class="headerlink" href="#performing-statistical-analysis" title="Link to this heading"></a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">longitudinal_ecg_analysis.stats_analysis</span></code> to investigate associations between the derived features and health outcomes.</p>
+<section id="id19">
+<h3>Usage<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.stats_analysis<span class="w"> </span>&lt;dataset_root_proc_folder&gt;<span class="w"> </span>&lt;analysis_name&gt;
+</pre></div>
+</div>
+</section>
+<section id="id20">
+<h3>Example<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>longitudinal_ecg_analysis.stats_analysis<span class="w"> </span>/Users/petercharlton/Documents/data/music/proc<span class="w"> </span>analysis1
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="datasets.html" class="btn btn-neutral float-left" title="Datasets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="variables.html" class="btn btn-neutral float-right" title="Variables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Nokia Bell Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+[project]
+name = "longitudinal_ecg_analysis"
+version = "1.0.0"
+description = "A package for predicting health outcomes from physiological signals"
+authors = [
+  { name="Peter H Charlton", email="peter.charlton@nokia-bell-labs.com" }
+]
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
