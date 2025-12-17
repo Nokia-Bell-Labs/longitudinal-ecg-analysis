@@ -53,7 +53,7 @@ def calculate_prsa_features(rri_series, segment_size=4, threshold=0.05, do_verbo
     # Define the half-window size
     half_size = segment_size // 2
     
-    # Step 2-4: Define segments, phase rectification, and averaging
+    # Steps 2-4: Define segments, phase rectification, and averaging
     # For DC
     dc_segments = []
     for anchor in dc_anchors:
