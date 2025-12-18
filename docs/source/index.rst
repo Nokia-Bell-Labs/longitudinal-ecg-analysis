@@ -61,6 +61,7 @@ Further details of this example are provided in the :ref:`Running demo analysis 
    :caption: Contents:
 
    overview
+   background
    datasets
    examples
    variables
