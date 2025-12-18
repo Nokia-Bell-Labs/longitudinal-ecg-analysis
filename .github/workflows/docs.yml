@@ -14,6 +14,10 @@ jobs:
   docs:
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}$
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -42,5 +46,6 @@ jobs:
           path: docs/build/html
 
       - name: Deploy to GitHub Pages
+        id: deployment
         if: github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v4
