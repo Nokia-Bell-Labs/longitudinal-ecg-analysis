@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  docs:
+  build-docs:
     runs-on: ubuntu-latest
 
     steps:
@@ -41,6 +41,20 @@ jobs:
         with:
           path: docs/build/html
 
+  deploy-pages:
+    if: github.ref == 'refs/heads/main'
+    needs: build-docs
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+  
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}$
+
+    steps:
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: actions/deploy-pages@v4
+        id: deployment
+        uses: actions/deploy-pages@v4   
