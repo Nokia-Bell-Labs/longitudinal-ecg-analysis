@@ -13,21 +13,23 @@ The documentation is a mixture of manually written pages, and auto-generated API
   * Documentation is written in ``reStructuredText`` syntax, as documented `here <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_ .
   * If adding a new file, be sure to include it in the table of contents in ``index.rst``
 
-* Use a virtual environment, e.g. created using::
+* Use a virtual environment with the required dependencies for building docs, e.g. created using::
    
    cd longitudinal-ecg-analysis/
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
+   python3 -m venv .venv-docs
+   source .venv-docs/bin/activate
+   pip install --uppgrade pip
+   pip install -r docs/requirements.txt
 
-* Update the auto-generated API documentation using::
+* Test build the docs locally using::
    
-   cd longitudinal-ecg-analysis/
-   sphinx-apidoc -f -o docs/source/api ./src/longitudinal_ecg_analysis
    cd docs
-   make html
-   cd ..
+   sphinx-apidoc -f -o source/api ../src/longitudinal_ecg_analysis
+   sphinx-build -b html source build/html
 
+* Raise a PR, and then the docs will be built using a GitHub action.
+
+   
 Generate requirements.txt
 -------------------------
 
