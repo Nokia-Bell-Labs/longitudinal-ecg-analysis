@@ -2,9 +2,7 @@
 
 The **Longitudinal ECG Analysis** toolbox is designed to investigate associations between ECG features and future health outcomes. It provides a processing pipeline to curate longitudinal ECG datasets (_e.g._ Holter ECG datasets), extract features from ECG signals, and then perform statistical analyses to identify significant associations between ECG features and health outcomes.
 
-The full documentation is provided in *docs/build/html*. To view the documentation:
-- [download the code](https://github.com/Nokia-Bell-Labs/longitudinal_ecg_analysis/archive/refs/heads/main.zip), or clone the repo etc
-- view the documentation locally, starting with *docs/build/html/index.html*
+The documentation is available [here](https://nokia-bell-labs.github.io/longitudinal-ecg-analysis/).
 
 ## Use of the toolbox
 
