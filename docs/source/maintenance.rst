@@ -23,7 +23,7 @@ The documentation is a mixture of manually written pages, and auto-generated API
 * Update the auto-generated API documentation using::
    
    cd longitudinal-ecg-analysis/
-   sphinx-apidoc -f -o docs/source ./src/longitudinal_ecg_analysis
+   sphinx-apidoc -f -o docs/source/api ./src/longitudinal_ecg_analysis
    cd docs
    make html
    cd ..

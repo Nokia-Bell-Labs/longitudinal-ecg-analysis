@@ -65,5 +65,5 @@ Further details of this example are provided in the :ref:`Running demo analysis 
    examples
    variables
    maintenance
-   API Documentation <modules>
+   API Documentation <api/modules>
    
