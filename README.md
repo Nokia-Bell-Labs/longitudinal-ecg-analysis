@@ -8,7 +8,7 @@ The full documentation is provided in *docs/build/html*. To view the documentati
 
 ## Use of the toolbox
 
-The toolbox was used in the following work:
+The toolbox has been used in the following work:
 
 * Shu Y, Charlton PH, Kawsar F, Hernesniemi J, and Malekzadeh M, **'CLEF: Clinically-Guided Contrastive Learning for Electrocardiogram Foundation Models'**. arXiv preprint arXiv:2512.02180. 2025. DOI: [10.48550/arXiv.2512.02180](https://doi.org/10.48550/arXiv.2512.02180).
 
